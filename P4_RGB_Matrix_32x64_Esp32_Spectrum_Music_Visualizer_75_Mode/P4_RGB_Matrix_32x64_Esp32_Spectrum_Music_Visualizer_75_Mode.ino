@@ -1,5 +1,5 @@
 /* REQUIRES the following Arduino libraries:
-// - Lien vidéo: https://youtu.be/Yq5xgibQb5A
+// - Lien vidéo: https://youtu.be/r_nMU0Glcuo
 // - Diagram: https://youtu.be/l33WRd2h6gM
 // - GPxMatrix Library: https://github.com/3tawi/GPxMatrix
 // - Adafruit_GFX Library: https://github.com/adafruit/Adafruit-GFX-Library
@@ -13,17 +13,15 @@
 #include "SPIFFS.h"
 #include "page.h"
 
-#define A    15
-#define B    16
-#define C    17
-#define D    4
-#define CLK  0 
-#define LAT  32 
-#define OE   33
+#define P_A    32
+#define P_B    17
+#define P_C    33
+#define P_D    16
+#define P_CLK  0 
+#define P_LAT  2 
+#define P_OE   4
 
-
-uint8_t listrgbpins[6] = {25, 26, 27, 12, 13, 14};
-GPxMatrix matrix(A, B, C, D, CLK, LAT, OE, true, 64, listrgbpins);
+GPxMatrix matrix(P_A, P_B, P_C, P_D, P_CLK, P_LAT, P_OE, true, 64);
 
 WebServer server(80);
 
